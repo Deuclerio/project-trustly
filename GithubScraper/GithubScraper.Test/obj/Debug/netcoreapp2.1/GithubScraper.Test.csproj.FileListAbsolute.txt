@@ -1,0 +1,16 @@
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\GithubScraper.Test.deps.json
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\GithubScraper.Test.runtimeconfig.json
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\GithubScraper.Test.runtimeconfig.dev.json
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\GithubScraper.Test.dll
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\GithubScraper.Test.pdb
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\GithubScraper.Domain.dll
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\GithubScraper.Domain.pdb
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\obj\Debug\netcoreapp2.1\GithubScraper.Test.csprojAssemblyReference.cache
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\obj\Debug\netcoreapp2.1\GithubScraper.Test.AssemblyInfoInputs.cache
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\obj\Debug\netcoreapp2.1\GithubScraper.Test.AssemblyInfo.cs
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\obj\Debug\netcoreapp2.1\GithubScraper.Test.csproj.CopyComplete
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\obj\Debug\netcoreapp2.1\GithubScraper.Test.dll
+C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Test\obj\Debug\netcoreapp2.1\GithubScraper.Test.pdb
