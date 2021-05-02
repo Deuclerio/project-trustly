@@ -1,0 +1,8 @@
+﻿Build iniciado...
+1>------ Compilação iniciada: Projeto: GithubScraper.Domain, Configuração: Debug Any CPU ------
+1>GithubScraper.Domain -> C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\bin\Debug\netstandard2.0\GithubScraper.Domain.dll
+2>------ Compilação iniciada: Projeto: GithubScraper, Configuração: Debug Any CPU ------
+3>------ Compilação iniciada: Projeto: GithubScraper.Test, Configuração: Debug Any CPU ------
+3>GithubScraper.Test -> C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Test\bin\Debug\netcoreapp2.1\GithubScraper.Test.dll
+2>GithubScraper -> C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper\bin\Debug\netcoreapp2.1\GithubScraper.dll
+========== Compilar: 3 com êxito, 0 com falha, 0 atualizados, 0 ignorados ==========

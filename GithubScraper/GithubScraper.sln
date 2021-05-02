@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubScraper", "GithubScra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubScraper.Domain", "GithubScraper.Domain\GithubScraper.Domain.csproj", "{8982C58B-ACC4-4060-AFBF-5C70A3CB94C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubScraper.Test", "GithubScraper.Test\GithubScraper.Test.csproj", "{1D517BA5-AB4A-4D51-B792-5E3FA5AD61F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubScraper.Test", "GithubScraper.Test\GithubScraper.Test.csproj", "{1D517BA5-AB4A-4D51-B792-5E3FA5AD61F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

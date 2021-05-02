@@ -6,3 +6,12 @@ C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\
 C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.AssemblyInfo.cs
 C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.dll
 C:\Users\Deuclerio\Desktop\github_project-trustly\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.pdb
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\bin\Debug\netstandard2.0\GithubScraper.Domain.deps.json
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\bin\Debug\netstandard2.0\GithubScraper.Domain.dll
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\bin\Debug\netstandard2.0\GithubScraper.Domain.pdb
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.csprojAssemblyReference.cache
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.AssemblyInfoInputs.cache
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.AssemblyInfo.cs
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.csproj.CoreCompileInputs.cache
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.dll
+C:\Users\deuclerio.salles\source\repos\Deuclerio\project-trustly\GithubScraper\GithubScraper.Domain\obj\Debug\netstandard2.0\GithubScraper.Domain.pdb

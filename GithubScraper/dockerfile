@@ -1,0 +1,30 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1-stretch-slim AS aliasBase
+WORKDIR /app
+
+COPY *.sln ./
+
+COPY ["GithubScraper/GithubScraper.csproj", "GithubScraper/"]
+COPY ["GithubScraper.Domain/GithubScraper.Domain.csproj", "GithubScraper.Domain/"]
+COPY ["GithubScraper.Test/GithubScraper.Test.csproj", "GithubScraper.Test/"]
+
+RUN dotnet restore GithubScraper.sln
+
+COPY . ./
+
+RUN dotnet build
+
+WORKDIR GithubScraper.Test/
+RUN dotnet test --logger:trx
+
+
+WORKDIR /app
+# publish is executed inside each project folder. So, is necessary put all Binarys in a upper level folder.
+RUN dotnet publish GithubScraper/GithubScraper.csproj -c Release -o ../out
+ 
+# Build runtime image
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
+WORKDIR /app
+COPY --from=aliasBase app/out .
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet GithubScraper.dll

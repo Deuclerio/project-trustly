@@ -5,6 +5,7 @@ using System.Net;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using GithubScraper.Domain.Entity;
 
 namespace GithubScraper.Domain
 {
@@ -14,6 +15,10 @@ namespace GithubScraper.Domain
     /// </summary>
     public class Scraper
     {
+
+        public static string GitHubUrl = "https://github.com/";
+
+
         public List<ScrapeResult> Execute(string user, string repo)
         {
             var folderContents = new List<FolderContent>();
@@ -22,47 +27,26 @@ namespace GithubScraper.Domain
             GetFolderContent($"https://github.com/{user}/{repo}", folderContents);
 
 
-            Parallel.ForEach(folderContents.Where(x => x.Type == "file"), (item) =>
+            Parallel.ForEach(folderContents.Where(x => x.Type == ObjectType.FILE), (item) =>
              {
                  GetFileInfo(item);
              });
 
 
 
-            var result = folderContents.Where(x => x.Type == "file")
+            var result = folderContents.Where(x => x.Type == ObjectType.FILE)
                  .GroupBy(x => x.Extension)
                  .Select(x => new ScrapeResult
                  {
                      FileExtension = x.Key,
-                     Size = x.Sum(y => ConvertToBytes(y)),
+                     Size = x.Sum(y => y.ConvertToBytes(y)),
                      NumberOfLines = x.Sum(y => y.NumberOfLines)
                  });
 
             return result.OrderBy(x => x.FileExtension).ToList();
         }
 
-        long ConvertToBytes(FolderContent f)
-        {
-            if (f.SizeUnit == "byte" || f.SizeUnit == "bytes")
-            {
-                return (long)f.Size;
-            }
-
-            if (f.SizeUnit == "kb")
-            {
-                return (long)f.Size * 1024;
-            }
-
-            if (f.SizeUnit == "mb")
-            {
-                return (long)f.Size * 1024 * 1024;
-            }
-
-            throw new Exception("Invalid value:" + f.SizeUnit);
-
-        }
-
-        void GetFolderContent(string pageUrl, List<FolderContent> folderContents)
+        public void GetFolderContent(string pageUrl, List<FolderContent> folderContents)
         {
             var client = new WebClient();
             byte[] data = client.DownloadData(pageUrl);
@@ -81,29 +65,34 @@ namespace GithubScraper.Domain
                 var url = tr.SelectSingleNode("td[2]/span/a").Attributes["href"].Value;
                 var name = tr.SelectSingleNode("td[2]/span/a").InnerText;
 
-                folderContents.Add(new FolderContent { Type = type, Url = url, Name = name, Extension = GetExtention(name) });
 
-                if (type == "directory")
+                var dirObjectType = type == "file" ? ObjectType.FILE : ObjectType.DIRECTORY;
+
+
+                var newItem = new FolderContent { Type = dirObjectType, Url = url, Name = name, Extension = GetExtention(name) };
+
+                folderContents.Add(newItem);
+
+                if (newItem.Type == ObjectType.DIRECTORY)
                 {
-                    GetFolderContent("https://github.com" + url, folderContents);
+                    GetFolderContent(GitHubUrl + url, folderContents);
                 }
             });
 
 
         }
 
-        string GetExtention(string file)
+        public string GetExtention(string file)
         {
             var count = file.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
 
             return count.Length == 1 ? string.Empty : count[1];
         }
 
-
-        void GetFileInfo(FolderContent file)
+        public void GetFileInfo(FolderContent file)
         {
             var client = new WebClient();
-            byte[] data = client.DownloadData("https://github.com" + file.Url);
+            byte[] data = client.DownloadData(GitHubUrl + file.Url);
             var dataStr = client.Encoding.GetString(data);
 
 
@@ -141,30 +130,5 @@ namespace GithubScraper.Domain
         Regex regex = new Regex(@"(\d* lines).*\(.*\).* ([0-9]*[\.\d*].*[a-zA-Z]*)");
 
 
-    }
-
-    public class FolderContent
-    {
-        public string Type { get; set; }
-
-        public string Url { get; set; }
-
-        public string Name { get; set; }
-
-        public string Extension { get; set; }
-
-        public decimal Size { get; set; }
-
-        public string SizeUnit { get; set; }
-        public long NumberOfLines { get; set; }
-    }
-
-    public class ScrapeResult
-    {
-        public string FileExtension { get; set; }
-
-        public long NumberOfLines { get; set; }
-
-        public long Size { get; set; }
     }
 }

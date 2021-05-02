@@ -1,4 +1,5 @@
 using GithubScraper.Domain;
+using GithubScraper.Domain.Entity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,15 +27,12 @@ namespace GithubScraper.Test
 
         }
 
-        void AssertData(List<ScrapeResult> data, string extension, int size, long numberOfLines)
+        public void AssertData(List<ScrapeResult> data, string extension, int size, long numberOfLines)
         {
             var ext = data.SingleOrDefault(x => x.FileExtension == extension);
 
             Assert.AreEqual(size, ext.Size);
             Assert.AreEqual(numberOfLines, ext.NumberOfLines);
         }
-
-
-
     }
 }
